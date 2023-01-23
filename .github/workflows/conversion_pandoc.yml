@@ -28,6 +28,7 @@ jobs:
       - uses: docker://pandoc/latex:2.9
         with:
           args: --output=output/project_report.docx  
+                --filter pandoc-crossref 
                 --bibliography=references.bib --reference-docx=referecences_template.doc
                 project_report.tex 
                 
