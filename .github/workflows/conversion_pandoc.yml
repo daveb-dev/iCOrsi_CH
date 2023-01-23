@@ -25,7 +25,7 @@ jobs:
           mkdir output  # create output dir
           # this will also include README.md
           #echo "::set-output name=files::$(printf '"%s" ' *.md)"
-      - uses: docker://pandoc/latex:2.9
+      - uses: docker://pandoc/latex:3.0
         with:
           args: --output=output/project_report.docx  
                 --filter pandoc-crossref 
