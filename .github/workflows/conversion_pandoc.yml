@@ -27,7 +27,10 @@ jobs:
           #echo "::set-output name=files::$(printf '"%s" ' *.md)"
       - uses: docker://pandoc/latex:2.9
         with:
-          args: --output=output/project_report.docx  project_report.tex
+          args: --output=output/project_report.docx  
+                --bibliography=references.bib --reference-docx=referecences_template.doc
+                project_report.tex 
+                
       - uses: actions/upload-artifact@master
         with:
           name: output
