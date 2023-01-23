@@ -27,7 +27,7 @@ jobs:
           #echo "::set-output name=files::$(printf '"%s" ' *.md)"
       - uses: docker://pandoc/latex:3.0
         with:
-          args: --output=output/project_report.docx  
+          args: --output=output/project_report.pdf  
                 --filter pandoc-crossref 
                 --bibliography=references.bib 
                 project_report.tex 
