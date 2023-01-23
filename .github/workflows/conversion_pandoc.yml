@@ -29,7 +29,7 @@ jobs:
         with:
           args: --output=output/project_report.docx  
                 --filter pandoc-crossref 
-                --bibliography=references.bib --reference-docx=referecences_template.doc
+                --bibliography=references.bib 
                 project_report.tex 
                 
       - uses: actions/upload-artifact@master
